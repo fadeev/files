@@ -22,7 +22,9 @@ func GetTxCmd(cdc *codec.Codec) *cobra.Command {
 	}
 
 	filesTxCmd.AddCommand(flags.PostCommands(
-    // this line is used by starport scaffolding
+		// this line is used by starport scaffolding
+		GetCmdCreateClaim(cdc),
+		GetCmdDeleteClaim(cdc),
 	)...)
 
 	return filesTxCmd
